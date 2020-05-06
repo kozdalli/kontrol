@@ -9,7 +9,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """odev2.2.c compiles"""
-    check50.c.compile("odev2.2.c", lcs50=True)
+    check50.c.compile("odev2.2.c")
 
 @check50.check(compiles)
 def test_reject_negative():
