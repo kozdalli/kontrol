@@ -2,18 +2,18 @@ import check50.c
 
 @check50.check()
 def exists():
-    """odev22.c exists"""
+    """odev22.c dosya bulundu"""
     check50.exists("odev22.c")
     check50.include("1.txt", "2.txt", "8.txt")
 
 @check50.check(exists)
 def compiles():
-    """odev22.c compiles"""
+    """odev22.c derleme başarılı"""
     check50.c.compile("odev22.c")
 
 @check50.check(compiles)
 def test_reject_negative():
-    """rejects a height of -1"""
+    """Yükseklik -1 girildiğinde reddetti"""
     check50.run("./odev22").stdin("-1").reject()
 
 @check50.check(compiles)
