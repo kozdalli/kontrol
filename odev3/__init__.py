@@ -69,6 +69,4 @@ def test11():
 @check50.check(compiles)
 def test00():
     """-5 -> Kart No: """
-    check50.run("./odev3").stdin("-5").stdout("Kart No: ").stdin("-10").stdout("Kart No: ")
-    
-
+    check50.run("./odev3").stdin("-5").stdout("Kart No: ").stdin("9").stdout("GECERSIZ\n").stdout(check50.EOF).exit(0)
