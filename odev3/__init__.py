@@ -13,5 +13,10 @@ def compiles():
     
 @check50.check(compiles)
 def test00():
-    """-5 -> Kart No: """
+    """-5 -> Kart No: TEKLI """
+    check50.run("./odev3").stdin("-5").stdout("Kart No: ")
+    
+    @check50.check(compiles)
+def test01():
+    """-5 -> Kart No: COKLU """
     check50.run("./odev3").stdin("-5").stdout("Kart No: ").stdin("9").stdout("GECERSIZ\n").stdout(check50.EOF).exit(0)
