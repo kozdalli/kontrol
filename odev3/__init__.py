@@ -14,4 +14,4 @@ def compiles():
     @check50.check(compiles)
 def test0():
     """0 cikis sagliyor mu"""
-    check50.run("./odev3").stdin("0").stdout("PROGRAM SONLANIYOR\n").stdout(check50.EOF).exit(0)
+    check50.run("./odev3").stdin("0").stdout("PROGRAM SONLANMISTIR\n").stdout(check50.EOF).exit(0)
