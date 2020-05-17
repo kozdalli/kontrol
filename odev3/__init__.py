@@ -14,7 +14,7 @@ def compiles():
 @check50.check(compiles)
 def test1():
     """identifies 378282246310005 as AMEX"""
-    check50.run("./credit").stdin("378282246310005").stdout("AMEX\n")
+    check50.run("./credit").stdin("378282246310005").stdout("AMEX\n").stdin("0").stdout("PROGRAM SONLANDIRILIYOR\n").stdout(check50.EOF).exit(0)
 
 @check50.check(compiles)
 def test2():
