@@ -5,3 +5,12 @@ check50:
 
 submit50:
   files: *check50_files
+  
+      bar:
+      - run: python3 bar.py # run python3 bar.py
+        stdin:
+          - -5 # insert baz into stdin
+          - -2 # insert qux into stdin
+        stdout:
+          - Kart No: # first expect bar baz in stdout
+          - Kart No: # then expect bar qux in stdout
