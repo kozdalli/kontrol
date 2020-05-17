@@ -65,3 +65,8 @@ def test10():
 def test11():
     """4111111111111113 GECERSIZ"""
     check50.run("./odev3").stdin("4111111111111113").stdout("GECERSIZ\n").stdout(check50.EOF).exit(0)
+    
+@check50.check(compiles)
+def test11():
+    """-5 \nKart No: """
+    check50.run("./odev3").stdin("-5").stdout("Kart No: ").stdout(check50.EOF).exit(0)
