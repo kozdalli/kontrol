@@ -71,8 +71,4 @@ def test00():
     """-5 -> Kart No: """
     check50.run("./odev3").stdin("-5").stdout("Kart No: ")
     
-    
-   @check50.check(compiles)
-def test01():
-    """12345678901234567 -> Kart No: """
-    check50.run("./odev3").stdin("-5").stdout("Kart No: ")
+
